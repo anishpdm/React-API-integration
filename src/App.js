@@ -1,23 +1,21 @@
-import logo from './logo.svg';
-import './App.css';
+import AddCourse from './components/AddCourse';
+import ApiTest from './components/ApiTest';
+import CourseApi from './components/CourseApi';
+import Lists from './components/Lists';
+import ToDoApp from './components/ToDoApp';
 
 function App() {
+
+
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      {/* <ApiTest /> */}
+
+      <AddCourse />
+      <CourseApi/>
+      {/* <Lists />
+
+     <ToDoApp /> */}
     </div>
   );
 }

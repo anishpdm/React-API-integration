@@ -1,0 +1,22 @@
+{
+  "files": {
+    "main.css": "/React-API-integration/static/css/main.6dea0f05.chunk.css",
+    "main.js": "/React-API-integration/static/js/main.694e5ffa.chunk.js",
+    "main.js.map": "/React-API-integration/static/js/main.694e5ffa.chunk.js.map",
+    "runtime-main.js": "/React-API-integration/static/js/runtime-main.9901c1b4.js",
+    "runtime-main.js.map": "/React-API-integration/static/js/runtime-main.9901c1b4.js.map",
+    "static/js/2.bedd55ab.chunk.js": "/React-API-integration/static/js/2.bedd55ab.chunk.js",
+    "static/js/2.bedd55ab.chunk.js.map": "/React-API-integration/static/js/2.bedd55ab.chunk.js.map",
+    "static/js/3.f7d6209b.chunk.js": "/React-API-integration/static/js/3.f7d6209b.chunk.js",
+    "static/js/3.f7d6209b.chunk.js.map": "/React-API-integration/static/js/3.f7d6209b.chunk.js.map",
+    "index.html": "/React-API-integration/index.html",
+    "static/css/main.6dea0f05.chunk.css.map": "/React-API-integration/static/css/main.6dea0f05.chunk.css.map",
+    "static/js/2.bedd55ab.chunk.js.LICENSE.txt": "/React-API-integration/static/js/2.bedd55ab.chunk.js.LICENSE.txt"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.9901c1b4.js",
+    "static/js/2.bedd55ab.chunk.js",
+    "static/css/main.6dea0f05.chunk.css",
+    "static/js/main.694e5ffa.chunk.js"
+  ]
+}

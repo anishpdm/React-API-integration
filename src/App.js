@@ -5,23 +5,25 @@ import Lists from './components/Lists';
 import ToDoApp from './components/ToDoApp';
 import LeranGrid from './components/LeranGrid';
 import News from './components/News';
+import Header from './components/Header';
+import { BrowserRouter,Route } from 'react-router-dom';
+import TestForm from './components/TestForm';
 
 function App() {
 
 
   return (
     <div className="App">
-      {/* <ApiTest /> */}
 
-      {/* <AddCourse />
-      <CourseApi/> */}
-      {/* <Lists />
+      <BrowserRouter>
+      <Header />
 
-     <ToDoApp /> */}
+      <Route path="/" exact component={AddCourse}/>
+      <Route path="/viewcourse" exact component={CourseApi}/>
+      <Route path="/test" exact component={TestForm}/>
 
-     {/* <LeranGrid /> */}
+      </BrowserRouter>
 
-     <News />
     </div>
   );
 }

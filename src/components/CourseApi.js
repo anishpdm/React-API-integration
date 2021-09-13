@@ -8,6 +8,11 @@ export default class CourseApi extends Component {
         course:[],
         loadStatus:false
     }
+    constructor(props){
+        super(props);
+
+      this.getData()  
+    }
 
      getData=()=>{
          this.setState({loadStatus:true})
@@ -30,7 +35,6 @@ export default class CourseApi extends Component {
         return (
             <div>
 
-<Button onClick={this.getData}>Get Courses</Button>
 
 
 {!this.state.loadStatus ? (

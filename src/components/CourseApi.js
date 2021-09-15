@@ -11,25 +11,25 @@ export default class CourseApi extends Component {
     constructor(props){
         super(props);
 
-      this.getData()  
+       
     }
 
-     getData=()=>{
-         this.setState({loadStatus:true})
-         Axios.get("https://mylinkurcodesapp.herokuapp.com/getcourses").then(
-             (response)=>{
-                 console.log(response)
+    //  getData=()=>{
+    //      this.setState({loadStatus:true})
+    //      Axios.get("https://mylinkurcodesapp.herokuapp.com/getcourses").then(
+    //          (response)=>{
+    //              console.log(response)
 
-                 this.setState({
-                     course:response.data,
-                     loadStatus:false
-                 })
+    //              this.setState({
+    //                  course:response.data,
+    //                  loadStatus:false
+    //              })
 
-                 console.log(this.course)
-             }
-         )
+    //              console.log(this.course)
+    //          }
+    //      )
 
-    }
+    // }
 
     render() {
         return (
@@ -37,8 +37,8 @@ export default class CourseApi extends Component {
 
 
 
-{!this.state.loadStatus ? (
-                    <ul> {this.state.course.map( (value,index)=>{
+{
+                    <ul> {this.props.sendingData.map( (value,index)=>{
 
                         return <div>
                             <li key={index}> {value.courseTitle}</li>
@@ -48,7 +48,7 @@ export default class CourseApi extends Component {
                     } )} </ul>
 
 
-                ) : <CircularProgress color="secondary" /> }
+              }
 
     
 </div>

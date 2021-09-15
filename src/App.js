@@ -8,6 +8,7 @@ import News from './components/News';
 import Header from './components/Header';
 import { BrowserRouter,Route } from 'react-router-dom';
 import TestForm from './components/TestForm';
+import { Grid } from '@material-ui/core';
 
 function App() {
 
@@ -15,14 +16,15 @@ function App() {
   return (
     <div className="App">
 
-      <BrowserRouter>
+  
+     <BrowserRouter>
       <Header />
 
       <Route path="/" exact component={AddCourse}/>
       <Route path="/viewcourse" exact component={CourseApi}/>
       <Route path="/test" exact component={TestForm}/>
 
-      </BrowserRouter>
+      </BrowserRouter> 
 
     </div>
   );

@@ -1,6 +1,7 @@
 import { Button, Grid,TextField } from '@material-ui/core'
 import React, { Component } from 'react'
 import Axios from 'axios'
+import CourseApi from './CourseApi'
 
 export default class AddCourse extends Component {
   
@@ -9,7 +10,13 @@ export default class AddCourse extends Component {
         courseDescription:"",
         courseDate:"",
         courseDuration:"",
-        courseVenue:""
+        courseVenue:"",
+        data:[]
+    }
+    constructor(props){
+        super(props);
+
+       this.getData()
     }
 
     onHandleChange= event=> {
@@ -18,6 +25,23 @@ export default class AddCourse extends Component {
    
         })
     }
+
+
+    getData=()=>{
+        this.setState({loadStatus:true})
+        Axios.get("https://mylinkurcodesapp.herokuapp.com/getcourses").then(
+            (response)=>{
+                console.log(response)
+
+                this.setState({
+                    data:response.data,
+                })
+
+                console.log(this.course)
+            }
+        )
+
+   }
 
     btnclickchange=()=>{
 
@@ -29,7 +53,17 @@ this.addData(this.state)
     addData=(x)=>{
         Axios.post("https://mylinkurcodesapp.herokuapp.com/addcourse",x).then(
             (response)=>{
-                console.log(response)
+                console.log(response.data.status)
+                if(response.data.status=="success"){
+                    alert("Succesfully added")
+                    this.getData()
+
+                }
+                else{
+                    alert("Error")
+
+                }
+
             }
         )
 
@@ -37,10 +71,13 @@ this.addData(this.state)
 
     render() {
         return (
-       <Grid container>
+       <Grid container style={{ padding:40 }}>
 
-           <Grid item xs={12} sm={2} md={2} lg={2}></Grid>
-           <Grid item xs={12} sm={8} md={8} lg={8}>
+
+      <Grid item xs={12} sm={6} md={6} >
+
+
+                
 
 <TextField
 required
@@ -91,11 +128,15 @@ name="courseVenue"/>
  type="submit"
  variant="contained" > SUBMIT</Button>
 
-           </Grid>
-           <Grid item xs={12} sm={2} md={2} lg={2}></Grid>
+        
 
 
+          
+           </Grid> 
+      <Grid item xs={12} sm={6} md={6} > <CourseApi sendingData={this.state.data} /> </Grid> 
+      
 
+ 
 
        </Grid>
         )

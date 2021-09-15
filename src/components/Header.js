@@ -18,6 +18,14 @@ export default class Header extends Component {
                         <Button href="/viewcourse" color="inherit"> View Course </Button>
                     </Toolbar>
                 </AppBar>
+
+                <br />
+                <br />
+                <br />
+                <br />
+                <br />
+
+
             </div>
         )
     }
